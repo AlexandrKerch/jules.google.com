@@ -1,0 +1,139 @@
+.tariff-selector-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 40px 20px;
+    background-color: #f0f4f8;
+}
+
+.tariff-card {
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tariff-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.tariff-card.popular {
+    border-color: #1e90ff;
+    border-width: 2px;
+    transform: scale(1.05);
+}
+
+.tariff-card.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.tariff-card.selected {
+    border-color: #28a745;
+    box-shadow: 0 8px 24px rgba(40, 167, 69, 0.2);
+    transform: scale(1.08);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e90ff;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tariff-name {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #333;
+}
+
+.tariff-price {
+    margin-bottom: 20px;
+}
+
+.price-amount {
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+}
+
+.price-period {
+    font-size: 16px;
+    color: #777;
+    margin-left: 5px;
+}
+
+.tariff-speed {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.tariff-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
+    flex-grow: 1;
+    color: #444;
+}
+
+.tariff-features li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+}
+
+.tariff-features li::before {
+    content: '✔';
+    color: #20c997;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.choose-tariff-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: auto;
+}
+
+.choose-tariff-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.tariff-card.popular .choose-tariff-btn {
+    background-color: #1e90ff;
+}
+
+.tariff-card.popular .choose-tariff-btn:hover {
+    background-color: #0073e6;
+}
